@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BIS NIDAAN - Platform Demo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -14,101 +14,75 @@
                         navy: '#0B2A5B',
                         trustblue: '#1F5FBF',
                         skymist: '#EAF2FF',
-                        saffron: '#F28C28',
                         ink: '#101828',
                         slate: '#475467',
-                        cloud: '#F7F9FC',
-                        mist: '#D0D5DD'
+                        cloud: '#F9FAFB',
+                        mist: '#E5E7EB'
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
                     }
                 }
             }
         }
     </script>
-    <style>
-        .grid-pattern {
-            background-size: 40px 40px;
-            background-image: 
-                linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
-            mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
-            -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
-        }
-        .glass-header {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-    </style>
 </head>
-<body class="bg-cloud font-sans text-ink min-h-screen flex flex-col relative selection:bg-trustblue selection:text-white">
-    <!-- Subtle Grid Background -->
-    <div class="absolute inset-0 grid-pattern pointer-events-none z-0"></div>
-
-    <!-- Glowing Orbs Background -->
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[400px] bg-trustblue/10 blur-[120px] rounded-full pointer-events-none z-0"></div>
-    <div class="absolute bottom-0 right-0 w-96 h-96 bg-saffron/10 blur-[100px] rounded-full pointer-events-none z-0"></div>
+<body class="bg-cloud font-sans text-ink min-h-screen flex flex-col selection:bg-trustblue selection:text-white">
 
     <!-- Header -->
-    <header class="w-full sticky top-0 z-50 glass-header border-b border-mist/50">
+    <header class="w-full bg-white border-b border-mist">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-trustblue flex items-center justify-center font-bold text-lg text-white shadow-lg">
+            <a href="/" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
+                <div class="w-10 h-10 rounded-full bg-trustblue flex items-center justify-center font-bold text-lg text-white">
                     BIS
                 </div>
-                <span class="font-bold text-xl tracking-tight text-navy">NIDAAN <span class="text-trustblue font-mono ml-1 text-xs bg-skymist px-2 py-1 rounded-md border border-trustblue/20">DEMO</span></span>
-            </div>
+                <span class="font-bold text-xl tracking-tight text-navy">NIDAAN</span>
+            </a>
             
-            <a href="/" class="group flex items-center gap-2 text-slate font-medium hover:text-navy transition-colors bg-white px-4 py-2 rounded-lg border border-mist hover:border-trustblue/30 shadow-sm hover:shadow-md">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:-translate-x-1 transition-transform"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-                Back to Platform
+            <a href="/" class="text-sm font-medium text-slate hover:text-navy transition-colors flex items-center gap-2">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Back to Home
             </a>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="w-full max-w-5xl mx-auto px-4 md:px-6 flex-1 flex flex-col justify-center items-center py-12 md:py-16 relative z-10">
-        <div class="text-center mb-10 max-w-3xl">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-navy tracking-tight mb-5 leading-tight">
-                See NIDAAN in <span class="text-transparent bg-clip-text bg-gradient-to-r from-trustblue to-info">Action.</span>
+    <main class="w-full max-w-4xl mx-auto px-6 flex-1 flex flex-col justify-center items-center py-16">
+        
+        <div class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-navy tracking-tight mb-4">
+                Platform Demo
             </h1>
-            <p class="text-slate text-lg md:text-xl">
-                Watch how the platform verifies products via Hyperledger, handles real-time consumer tracking, and simplifies manufacturer onboarding.
+            <p class="text-slate text-base md:text-lg max-w-2xl mx-auto">
+                Watch how NIDAAN verifies products, ensures authenticity via Hyperledger, and simplifies onboarding.
             </p>
         </div>
 
         <!-- Video Container -->
-        <div class="w-full aspect-video bg-white rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(11,42,91,0.15)] border border-mist relative group">
+        <div class="w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-xl border border-mist/50">
             <!-- Replace the video ID 'dQw4w9WgXcQ' below with your actual YouTube Video ID! -->
             <iframe 
-                class="w-full h-full relative z-10"
+                class="w-full h-full"
                 src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&rel=0&modestbranding=1" 
                 title="BIS NIDAAN Platform Demo" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowfullscreen>
             </iframe>
-            
-            <!-- Shimmer effect overlay for initial load -->
-            <div class="absolute inset-0 bg-slate-100 animate-pulse z-0"></div>
         </div>
         
-        <div class="mt-12 flex flex-col sm:flex-row items-center gap-4">
-             <a href="/consumer" class="bg-trustblue text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-navy transition-all shadow-[0_0_20px_rgba(31,95,191,0.3)] hover:shadow-lg hover:-translate-y-1 flex items-center gap-2">
+        <div class="mt-12 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+             <a href="/consumer" class="w-full sm:w-auto text-center bg-trustblue text-white px-8 py-3.5 rounded-xl font-semibold text-base hover:bg-navy transition-all shadow-md hover:shadow-lg">
                  Try Consumer Portal
-                 <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
              </a>
-             <a href="/manufacturer" class="bg-white text-trustblue border-2 border-mist px-8 py-4 rounded-xl font-bold text-lg hover:border-trustblue hover:bg-skymist transition-all hover:-translate-y-1 flex items-center gap-2">
+             <a href="/manufacturer" class="w-full sm:w-auto text-center bg-white text-slate border border-mist px-8 py-3.5 rounded-xl font-semibold text-base hover:border-trustblue hover:text-trustblue hover:bg-skymist transition-all shadow-sm hover:shadow-md">
                  Manufacturer Portal
              </a>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="w-full py-8 text-center text-slate text-sm mt-auto relative z-10 border-t border-mist/40 bg-white/40 backdrop-blur-sm">
+    <footer class="w-full py-8 text-center text-slate text-sm border-t border-mist bg-white mt-auto">
         &copy; 2024 Bureau of Indian Standards. All rights reserved.
     </footer>
 </body>
