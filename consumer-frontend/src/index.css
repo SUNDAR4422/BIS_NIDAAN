@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bis-navy: #0B2A5B;
+  --color-trust-blue: #1F5FBF;
+  --color-sky-mist: #EAF2FF;
+  --color-saffron: #F28C28;
+  --color-assured-green: #1E8E3E;
+  --color-assured-green-tint: #E6F4EA;
+  --color-caution-amber: #F5A623;
+  --color-caution-amber-tint: #FFF4DB;
+  --color-alert-red: #D93025;
+  --color-alert-red-tint: #FDECEA;
+  --color-info-teal: #0E8A9A;
+  --color-info-teal-tint: #E3F6F8;
+  --color-text-ink: #101828;
+  --color-text-slate: #475467;
+  --color-border-mist: #D0D5DD;
+  --color-surface-cloud: #F7F9FC;
+  --color-surface-white: #FFFFFF;
+
+  /* We map primary classes to Trust Blue for consistency in React components */
+  --color-primary-500: #1F5FBF; 
+  --color-primary-600: #174b99;
+  --color-primary-700: #123873;
+  --color-emerald-500: #1E8E3E;
+  --color-emerald-600: #166b2e;
+  
+  --font-sans: 'Inter', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-text-ink);
+  background-color: var(--color-surface-cloud);
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-enter {
+  animation: fadeSlideIn 0.25s ease-out;
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.btn-primary {
+  background-color: var(--color-trust-blue);
+  color: var(--color-surface-white);
+}
+.btn-primary:hover {
+  background-color: #174b99;
+}
+.btn-secondary {
+  background-color: var(--color-surface-white);
+  color: var(--color-trust-blue);
+  border: 1px solid var(--color-trust-blue);
+}
+.btn-saffron {
+  background-color: var(--color-saffron);
+  color: var(--color-surface-white);
+}
+
+.card {
+  background-color: var(--color-surface-white);
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.08);
+  border: none;
+}
