@@ -13,7 +13,7 @@ const ComingSoon = ({ title }: { title: string }) => (
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/manufacturer">
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Layout />}>

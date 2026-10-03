@@ -10,7 +10,7 @@ import { LabFinder } from './pages/LabFinder';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/consumer">
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Layout />}>
